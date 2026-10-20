@@ -37,7 +37,7 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
       }
     });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.overview, .projects, .skills, .experience, .about, .contact').forEach(section => {
+  document.querySelectorAll('.overview, .projects, .skills, .experience, .contact').forEach(section => {
     section.classList.add('reveal');
     observer.observe(section);
   });
