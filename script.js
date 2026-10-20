@@ -14,15 +14,28 @@ if (menuToggle && nav) {
   }));
 }
 
-const filters = document.querySelectorAll('[data-filter]');
-const cards = document.querySelectorAll('.project-card[data-category]');
-filters.forEach(button => {
-  button.addEventListener('click', () => {
+// Each project group (Professional / Personal) has its own independent filter:
+// buttons and cards are scoped to the group they belong to.
+document.querySelectorAll('.project-group').forEach(group => {
+  const filters = group.querySelectorAll('[data-filter]');
+  const cards = group.querySelectorAll('.project-card[data-category]');
+
+  // Hide filters that have no projects in this group (the "all" filter always stays).
+  filters.forEach(button => {
     const filter = button.dataset.filter;
-    filters.forEach(item => item.classList.toggle('active', item === button));
-    cards.forEach(card => {
-      const categories = card.dataset.category.split(' ');
-      card.hidden = filter !== 'all' && !categories.includes(filter);
+    if (filter === 'all') return;
+    const hasProjects = Array.from(cards).some(card => card.dataset.category.split(' ').includes(filter));
+    button.hidden = !hasProjects;
+  });
+
+  filters.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      filters.forEach(item => item.classList.toggle('active', item === button));
+      cards.forEach(card => {
+        const categories = card.dataset.category.split(' ');
+        card.hidden = filter !== 'all' && !categories.includes(filter);
+      });
     });
   });
 });
