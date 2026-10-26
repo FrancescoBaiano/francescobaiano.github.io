@@ -44,16 +44,19 @@
     <section class="section-wrap" style="padding-top:75px">
       <p class="section-kicker">// 02 — THE CHALLENGE</p>
       <h2 style="font-size:34px;letter-spacing:-.04em;max-width:760px;line-height:1.15">Reconstructing 3D models at runtime from files and MRI<span class="accent">.</span></h2>
-      <p style="color:#c8d0d9;max-width:780px;margin-top:20px">The core engineering challenge was making the application dynamically reconstruct 3D anatomical models <strong>at runtime</strong> directly from selected 3D files or raw MRI data. Instead of relying on pre-baked assets, the system had to generate accurate models on demand, ensuring seamless inspection for clinicians across desktop and VR.</p>
+      <p style="color:#c8d0d9;max-width:780px;margin-top:20px">The core engineering challenge was making the application dynamically reconstruct 3D anatomical models <strong>at runtime</strong> directly from user-selected files or raw MRI data. Instead of relying on pre-baked assets, the system had to generate accurate models on demand, ensuring seamless inspection for clinicians across desktop and VR.</p>
       <div class="challenge-grid">
         <div class="challenge-item"><span>01 / CORE PIPELINE</span><h3>Runtime 3D Generation</h3><p>Reconstructing anatomical 3D models on the fly from user-selected files or underlying MRI datasets.</p></div>
         <div class="challenge-item"><span>02 / DUAL PLATFORM</span><h3>Unified PC & VR Workflow</h3><p>Adapting interaction mechanics to work smoothly with desktop peripherals and immersive VR controllers.</p></div>
         <div class="challenge-item"><span>03 / PRECISION</span><h3>Deep Organ Analysis</h3><p>Isolating complex overlapping structures through custom materials, scaling, and per-organ transparency.</p></div>
       </div>
 
-      <div style="margin-top:28px;padding-top:24px;border-top:1px dashed var(--border)">
-        <p class="section-kicker" style="margin-bottom:12px;color:var(--muted)">// INTERFACE & INSPECTION TOOLS IN ACTION <span style="font-weight:normal;float:right">TAP TO ENLARGE</span></p>
-        <div class="case-strip" style="margin-top:0">
+      <div style="max-width: 920px; margin-top: 28px; padding-top: 24px; border-top: 1px dashed var(--border);">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px;">
+          <p class="section-kicker" style="margin: 0; color: var(--muted);">// INTERFACE & INSPECTION TOOLS IN ACTION</p>
+          <span style="font: 11px var(--mono); color: var(--muted); letter-spacing: .06em;">TAP TO ENLARGE</span>
+        </div>
+        <div class="case-strip" style="margin-top: 0;">
           <figure class="case-thumb"><div class="case-figure"><button class="zoomable" type="button" data-caption="MATERIAL EDITOR"><img src="../assets/images/projects/monasterio/monasterio-4.png" alt="Material editor — assign and modify materials to highlight specific structures" loading="lazy"></button></div><figcaption>MATERIAL EDITOR</figcaption></figure>
           <figure class="case-thumb"><div class="case-figure"><button class="zoomable" type="button" data-caption="PER-ORGAN TRANSPARENCY"><img src="../assets/images/projects/monasterio/monasterio-5.png" alt="Organ transparency — adjust the transparency of individual organs" loading="lazy"></button></div><figcaption>PER-ORGAN TRANSPARENCY</figcaption></figure>
           <figure class="case-thumb"><div class="case-figure"><button class="zoomable" type="button" data-caption="ZOOM / RESIZE (PC)"><img src="../assets/images/projects/monasterio/monasterio-3.png" alt="Zoom and resize — zoom in and out or resize the model for detailed inspection" loading="lazy"></button></div><figcaption>ZOOM / RESIZE (PC)</figcaption></figure>
@@ -63,30 +66,30 @@
     </section>
 
     <section class="section-wrap" style="padding-top:65px">
-      <p class="section-kicker">// 03 — REAL-TIME RECONSTRUCTION</p>
-      <h2 style="font-size:34px;letter-spacing:-.04em">The model is built while you use the app<span class="accent">.</span></h2>
-      <p style="color:#c8d0d9;max-width:780px;margin-top:20px">The anatomical models are not pre-made scene assets. When the user picks a model from inside the application, the 3D model is <strong>reconstructed at runtime from MRI data</strong> and shown immediately, ready to be inspected on PC or in VR.</p>
+      <p class="section-kicker">// 03 — WORKFLOW PIPELINE</p>
+      <h2 style="font-size:34px;letter-spacing:-.04em">From file selection to interactive 3D inspection<span class="accent">.</span></h2>
+      <p style="color:#c8d0d9;max-width:780px;margin-top:20px">The system processes user input directly inside the application, transforming raw medical data into fully manipulable 3D structures ready for surgical planning.</p>
       <div class="pipeline">
-        <div class="pipeline-step"><span>STEP 01</span><h3>Select a model</h3><p>The user chooses the model to explore directly from the application interface.</p></div>
-        <div class="pipeline-step"><span>STEP 02</span><h3>Rebuild at runtime</h3><p>The 3D model is reconstructed in real time from the MRI data of the selected model.</p></div>
-        <div class="pipeline-step"><span>STEP 03</span><h3>Inspect and adapt</h3><p>Scale it, change its materials and adjust the transparency of each organ.</p></div>
+        <div class="pipeline-step"><span>STEP 01</span><h3>Select a model</h3><p>The user chooses the anatomical target to explore directly from the application interface.</p></div>
+        <div class="pipeline-step"><span>STEP 02</span><h3>Rebuild at runtime</h3><p>The 3D model is generated in real time from the selected file or underlying MRI data.</p></div>
+        <div class="pipeline-step"><span>STEP 03</span><h3>Inspect and adapt</h3><p>Scale the model, modify materials, and adjust individual organ transparency.</p></div>
       </div>
     </section>
 
     <section class="section-wrap" style="padding-top:75px">
       <p class="section-kicker">// 04 — WHAT I BUILT</p><h2 style="font-size:34px;letter-spacing:-.04em">My contribution<span class="accent">.</span></h2>
       <div class="skills-grid" style="margin-top:25px">
-        <article class="skill-card"><span class="skill-index">01</span><h3>Runtime model reconstruction</h3><p>Implemented the real-time reconstruction of the 3D model from MRI data, based on the model selected inside the application.</p></article>
-        <article class="skill-card"><span class="skill-index">02</span><h3>Model transforms</h3><p>Implemented zoom and resizing controls so users could adjust the scale of anatomical models.</p></article>
-        <article class="skill-card"><span class="skill-index">03</span><h3>Material editing</h3><p>Added the ability to assign and change model materials at runtime to highlight specific structures.</p></article>
-        <article class="skill-card"><span class="skill-index">04</span><h3>Per-organ transparency</h3><p>Enabled transparency adjustments for individual organs to isolate or better visualize overlapping structures.</p></article>
-        <article class="skill-card"><span class="skill-index">05</span><h3>PC and VR interaction</h3><p>Adapted the interaction flow and performance to the input methods of the desktop and VR versions.</p></article>
+        <article class="skill-card"><span class="skill-index">01</span><h3>Runtime model reconstruction</h3><p>Implemented the real-time generation of 3D anatomical models from MRI data based on user selection.</p></article>
+        <article class="skill-card"><span class="skill-index">02</span><h3>Model transforms</h3><p>Developed intuitive zoom and scaling controls for detailed structural inspection.</p></article>
+        <article class="skill-card"><span class="skill-index">03</span><h3>Material editing</h3><p>Added runtime material assignment to effectively highlight specific anatomical areas.</p></article>
+        <article class="skill-card"><span class="skill-index">04</span><h3>Per-organ transparency</h3><p>Engineered transparency controls to easily analyze overlapping organs and internal details.</p></article>
+        <article class="skill-card"><span class="skill-index">05</span><h3>PC and VR interaction</h3><p>Optimized interaction flows and performance for both desktop environments and VR controllers.</p></article>
       </div>
     </section>
 
     <section class="section-wrap" style="padding-top:75px">
       <p class="section-kicker">// 05 — TECHNICAL REFLECTION</p><h2 style="font-size:34px;letter-spacing:-.04em">What this project demonstrates<span class="accent">.</span></h2>
-      <p style="color:var(--muted);max-width:780px;margin-top:20px">This work is a practical example of real-time 3D development in Unity: generating a model at runtime from the user's selection, manipulating transforms, updating materials, and designing interactions that stay consistent across PC and VR. It strengthened my skills in Unity, runtime 3D and VR interaction design, and gave me first-hand insight into how immersive technologies are applied in healthcare.</p>
+      <p style="color:var(--muted);max-width:780px;margin-top:20px">This work highlights advanced real-time 3D development in Unity: handling procedural model generation on the fly, building robust transformation tools, and designing cross-platform interfaces that bridge desktop and immersive VR healthcare workflows.</p>
     </section>
 
     <section class="section-wrap" style="padding-top:80px;padding-bottom:100px">
