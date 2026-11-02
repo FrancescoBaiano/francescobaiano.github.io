@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07090d">
+  <meta name="description" content="LabyRoots — VR maze game made for Global Game Jam 2023. Francesco Baiano worked as Game Designer: he wrote the GDD, defined the criteria for the handmade and procedural mazes, and tuned the time pressure.">
+  <meta property="og:title" content="LabyRoots — Francesco Baiano">
+  <meta property="og:description" content="Game Design for a VR maze game created at Global Game Jam 2023: procedural mazes, a ticking infection and fruit-based risk and reward.">
+  <meta property="og:type" content="website">
+  <title>LabyRoots — Francesco Baiano</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../index.html">FRANCESCO <span>BAIANO</span><i>®</i></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">MENU <span>☰</span></button>
+    <nav id="main-nav" class="nav">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#experience">Experience</a>
+      <a class="nav-contact" href="../index.html#contact">Contact <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section-wrap" style="padding-top:48px">
+      <a class="text-link" href="../index.html#projects">← Back to projects</a>
+      <p class="section-kicker" style="margin-top:40px">// GAME JAM PROJECT · GLOBAL GAME JAM 2023 · VR</p>
+      <h1 style="font-size:clamp(38px,6vw,66px);line-height:1.05;letter-spacing:-.05em;margin:18px 0">
+        Laby<span class="accent">Roots.</span>
+      </h1>
+      <p style="font-size:18px;max-width:760px;color:#c8d0d9">
+        A VR game in which an alien parasite has infected the planet and turned it into a maze. You have a few minutes to find and destroy its <strong>roots</strong> with your axe, then its heart, before the roots absorb you and turn you into a fruit tree. I worked as <strong>Game Designer</strong> and wrote the Game Design Document.
+      </p>
+      <div class="skill-tags" style="margin:25px 0 22px">
+        <span>VR</span><span>GAME DESIGN</span><span>LEVEL DESIGN</span><span>PROCEDURAL MAZES</span><span>GAME JAM</span>
+      </div>
+
+      <div class="store-cta">
+        <div class="cta-row">
+          <a class="button button-primary" href="https://signor-pipo.itch.io/labyroots" target="_blank" rel="noopener noreferrer" aria-label="Play LabyRoots on itch.io">Play on itch.io <span aria-hidden="true">↗</span></a>
+          <a class="button button-ghost" href="https://heyvr.io/game/labyroots" target="_blank" rel="noopener noreferrer" aria-label="Play LabyRoots on HeyVR">HeyVR <span aria-hidden="true">↗</span></a>
+          <a class="button button-ghost" href="https://sidequestvr.com/app/13919/labyroots" target="_blank" rel="noopener noreferrer" aria-label="Get LabyRoots on SideQuest">SideQuest <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="store-note">Published on three VR platforms after the jam.</p>
+      </div>
+
+      <figure class="case-figure case-hero">
+        <button class="zoomable" type="button" data-caption="LABYROOTS">
+          <img src="../assets/images/projects/labyroots/labyroots-1.png" alt="LabyRoots VR maze game screenshot" width="900" height="600">
+        </button>
+      </figure>
+      <p class="case-hero-caption">LABYROOTS — VR MAZE GAME</p>
+    </section>
+
+    <section class="section-wrap" style="padding-top:70px">
+      <div class="section-heading">
+        <div><p class="section-kicker">// 01 — PROJECT SNAPSHOT</p><h2>At a glance<span class="accent">.</span></h2></div>
+      </div>
+      <div class="overview-grid" style="border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px 0">
+        <div><span class="stat-label">ROLE</span><strong>Game Designer</strong><small>Wrote the GDD & Game Direction</small></div>
+        <div><span class="stat-label">EVENT</span><strong>Global Game Jam 2023</strong><small>Team game jam</small></div>
+        <div><span class="stat-label">GENRE</span><strong>VR maze</strong><small>Time-attack exploration</small></div>
+        <div><span class="stat-label">PUBLISHED ON</span><strong>3 platforms</strong><small>WebGL · Itch.io · HeyVR · SideQuest</small></div>
+      </div>
+    </section>
+
+    <section class="section-wrap" style="padding-top:75px">
+      <p class="section-kicker">// 02 — THE GAME</p>
+      <h2 style="font-size:34px;letter-spacing:-.04em;max-width:780px;line-height:1.15">A maze where every defeat leaves a mark on the next attempt<span class="accent">.</span></h2>
+      <p style="color:#c8d0d9;max-width:780px;margin-top:20px">
+        The player enters a labyrinth created by an alien meteorite and has a limited time to destroy the roots that protect the heart of the intruder. If time runs out, the roots absorb the player and a fruit tree grows in their place: a landmark that slows the infection nearby and offers fruits with bonuses or maluses to discover. The design problems I worked on were the following.
+      </p>
+      <div class="challenge-grid">
+        <div class="challenge-item"><span>01 / MAZE DESIGN</span><h3>From the first maze to procedural ones</h3><p>I defined the criteria for the first maze and then the criteria that procedurally generated mazes had to follow.</p></div>
+        <div class="challenge-item"><span>02 / READABILITY</span><h3>Objectives visible inside a maze</h3><p>I specified how the wall models should be built so that the objectives stay visible even while the player is lost in the labyrinth.</p></div>
+        <div class="challenge-item"><span>03 / TIME PRESSURE</span><h3>When the player must restart</h3><p>I set the time the player has before restarting, and how often fruits appear to delay that moment.</p></div>
+      </div>
+      <div style="max-width:920px;margin-top:28px;padding-top:24px;border-top:1px dashed var(--border)">
+        <p class="section-kicker" style="margin:0 0 12px;color:var(--muted)">// LABYROOTS IN VIDEO</p>
+        <figure class="case-video">
+            <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/1OkV-gYqxvs" title="LabyRoots — video" style="display:block;width:100%;height:100%;border:0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+            <figcaption>LABYROOTS — GAMEPLAY</figcaption>
+        </figure>
+        </div>
+      <div style="max-width:920px;margin-top:28px;padding-top:24px;border-top:1px dashed var(--border)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:12px;flex-wrap:wrap">
+            <p class="section-kicker" style="margin:0;color:var(--muted)">// GAMEPLAY SCREENSHOTS</p>
+            <span style="font:11px var(--mono);color:var(--muted);letter-spacing:.06em">TAP TO ENLARGE</span>
+        </div>
+        <div class="case-strip cols-3" style="margin-top:0">
+            <figure class="case-thumb"><div class="case-figure"><button class="zoomable" type="button" data-caption="THE LABYRINTH"><img src="../assets/images/projects/labyroots/labyroots-2.png" alt="LabyRoots labyrinth screenshot" loading="lazy"></button></div><figcaption>THE LABYRINTH</figcaption></figure>
+            <figure class="case-thumb"><div class="case-figure"><button class="zoomable" type="button" data-caption="ROOTS"><img src="../assets/images/projects/labyroots/labyroots-3.png" alt="LabyRoots alien roots screenshot" loading="lazy"></button></div><figcaption>ROOTS</figcaption></figure>
+            <figure class="case-thumb"><div class="case-figure"><button class="zoomable" type="button" data-caption="FRUITS AND TREES"><img src="../assets/images/projects/labyroots/labyroots-4.png" alt="LabyRoots fruits and post-mortem trees screenshot" loading="lazy"></button></div><figcaption>FRUITS &amp; TREES</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap" style="padding-top:65px">
+      <p class="section-kicker">// 03 — CORE LOOP</p>
+      <h2 style="font-size:34px;letter-spacing:-.04em">Explore, destroy, survive, or leave a tree<span class="accent">.</span></h2>
+      <p style="color:#c8d0d9;max-width:780px;margin-top:20px">
+        The GDD defines a loop built around one resource, time, and a handful of verbs: walk, pick up, drop, eat fruits and break things with the axe.
+      </p>
+      <div class="pipeline">
+        <div class="pipeline-step"><span>STEP 01</span><h3>Explore against the clock</h3><p>The infection advances while the player looks for the roots scattered in the maze. Eating the guide fruit lights up the underground roots and shows the way to them.</p></div>
+        <div class="pipeline-step"><span>STEP 02</span><h3>Destroy with the axe</h3><p>The axe breaks the roots, cuts through roots that block shortcuts, and can also remove the landmarks the player leaves behind. This gives a reason to carry it everywhere.</p></div>
+        <div class="pipeline-step"><span>STEP 03</span><h3>Win, or become a tree</h3><p>Destroying all the roots and then the heart wins the game. If time runs out, the player is absorbed and a tree grows there: a landmark that slows the infection and produces two fruits.</p></div>
+      </div>
+
+      <div style="max-width:920px;margin-top:40px">
+        <p class="section-kicker" style="color:var(--muted)">// FRUIT SYSTEM, AS DESIGNED</p>
+        <p style="color:#c8d0d9;max-width:780px;margin-top:12px">Fruits give bonuses or maluses that the player has to discover. In the design, the meaning of each fruit can change for every new player, so knowledge is learned in play and not memorized from a guide.</p>
+        <div class="challenge-grid">
+          <div class="challenge-item"><span>BLUE</span><h3>Rewinds the infection</h3><p>Moves the infection back by one stage. The rare version rewinds it completely.</p></div>
+          <div class="challenge-item"><span>YELLOW</span><h3>Advances the infection</h3><p>A trap: it moves the infection forward one stage. The rare version kills instantly.</p></div>
+          <div class="challenge-item"><span>RED</span><h3>Reveals the roots</h3><p>Makes the guide roots visible for a limited time. The rare version lasts longer.</p></div>
+          <div class="challenge-item"><span>GREEN</span><h3>Speeds the player up</h3><p>Teleports the player further for a limited time. The rare version lasts longer.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-wrap" style="padding-top:75px">
+      <p class="section-kicker">// 04 — MY CONTRIBUTION</p>
+      <h2 style="font-size:34px;letter-spacing:-.04em">What I worked on<span class="accent">.</span></h2>
+      <div class="skills-grid" style="margin-top:25px">
+        <article class="skill-card"><span class="skill-index">01</span><h3>Game Design Document</h3><p>Wrote the whole GDD: concept, mechanics, win and lose conditions, game elements and the task list for the team.</p></article>
+        <article class="skill-card"><span class="skill-index">02</span><h3>Maze criteria</h3><p>Defined the criteria for the first maze and for the procedural ones, with a grid where each cell's number says what should spawn there.</p></article>
+        <article class="skill-card"><span class="skill-index">03</span><h3>Wall models and visibility</h3><p>Specified how walls should be modeled so the objectives remain visible while the player is inside the maze.</p></article>
+        <article class="skill-card"><span class="skill-index">04</span><h3>Time and fruit pacing</h3><p>Set the time available to the player and how often fruits appear to delay the moment they have to restart.</p></article>
+        <article class="skill-card"><span class="skill-index">05</span><h3>Data-driven tuning</h3><p>Planned a JSON with all the design values (speed, maze setup and more), so that balance can be changed without touching code.</p></article>
+      </div>
+    </section>
+
+    <section class="section-wrap" style="padding-top:75px">
+      <p class="section-kicker">// 05 — COLLABORATION</p>
+      <h2 style="font-size:34px;letter-spacing:-.04em">Game jam team<span class="accent">.</span></h2>
+      <p style="color:var(--muted);max-width:780px;margin-top:20px">
+        LabyRoots was created with a team during Global Game Jam 2023, and later published on itch.io, HeyVR and SideQuest. I worked as Game Designer and handed the team a complete GDD to build from. Thanks to Lindy Enalya for the license of the low poly hand model.
+      </p>
+    </section>
+
+    <section class="section-wrap" style="padding-top:80px;padding-bottom:100px">
+      <div class="contact next-card">
+        <div><p class="section-kicker">// NEXT PROJECT</p><h2 style="font-size:30px">Fondazione Monasterio<span class="accent">.</span></h2><p>Anatomical 3D models rebuilt in real time from the one selected in the app, for exploration and surgical planning.</p><div class="cta-row"><a class="button button-primary" href="monasterio.html">Next case study ↗</a><a class="button button-ghost" href="../index.html#projects">All projects</a></div></div>
+        <div class="next-meta"><div><span>STACK</span><strong>Runtime 3D Reconstruction · MRI · Unity · C#</strong></div><div><span>FOCUS</span><strong>Interaction with 3D anatomical models for surgical planning.</strong></div><div><span>DEVICES</span><strong>PC · Quest Pro</strong></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="../index.html">FRANCESCO <span>BAIANO</span><i>®</i></a><span>CASE STUDY / LABYROOTS</span><a href="#">BACK TO TOP ↑</a></footer>
+
+  <!-- Image viewer -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+    <div class="lb-top"><span class="lb-count" id="lbCount"></span><button class="lb-btn" id="lbClose" type="button" aria-label="Close image viewer">×</button></div>
+    <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+    <div class="lb-bottom"><button class="lb-btn" id="lbPrev" type="button" aria-label="Previous image">‹</button><p class="lb-caption" id="lbCaption"></p><button class="lb-btn" id="lbNext" type="button" aria-label="Next image">›</button></div>
+  </div>
+  <script src="../script.js"></script>
+</body>
+</html>
