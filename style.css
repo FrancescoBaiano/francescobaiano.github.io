@@ -248,7 +248,64 @@ h1,h2,h3,p { margin-top: 0; }.hero h1 { font-size: clamp(42px, 5vw, 68px); line-
 .pipeline-step span{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
 .pipeline-step h3{font-size:19px;letter-spacing:-.02em;margin:0 0 8px}
 .pipeline-step p{margin:0;color:#c8d0d9;font-size:15px;line-height:1.6}
-.challenge-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:34px;border-top:1px solid var(--border)}
+/* ---------- Challenge grids: colonne configurabili ---------- */
+.challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 34px;
+  border-top: 1px solid var(--border);
+}
+
+/* Numero di colonne */
+.challenge-grid.cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.challenge-grid.cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.challenge-grid.cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.challenge-grid.cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Elementi */
+.challenge-item {
+  padding: 26px 24px 8px 0;
+  margin-right: 24px;
+  border-right: 1px solid var(--border);
+}
+
+.challenge-item:last-child {
+  border-right: 0;
+  margin-right: 0;
+}
+
+.challenge-item span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: .08em;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.challenge-item h3 {
+  font-size: 19px;
+  letter-spacing: -.02em;
+  margin: 0 0 8px;
+}
+
+.challenge-item p {
+  margin: 0;
+  color: #c8d0d9;
+  font-size: 15px;
+  line-height: 1.6;
+}
 .challenge-item{padding:26px 24px 8px 0;margin-right:24px;border-right:1px solid var(--border)}
 .challenge-item:last-child{border-right:0;margin-right:0}
 .challenge-item span{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--muted);margin-bottom:12px}
