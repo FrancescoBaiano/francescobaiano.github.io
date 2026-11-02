@@ -41,6 +41,9 @@ h1,h2,h3,p { margin-top: 0; }.hero h1 { font-size: clamp(42px, 5vw, 68px); line-
   overflow: hidden;
   background: var(--surface-2);
   position: relative;
+  display: flex;             /* Aggiunto per centrare */
+  align-items: center;       /* Centaturo verticale */
+  justify-content: center;   /* Centaturo orizzontale */
 }
 .case-figure img {
   display: block;
@@ -159,6 +162,9 @@ h1,h2,h3,p { margin-top: 0; }.hero h1 { font-size: clamp(42px, 5vw, 68px); line-
 .case-thumb .case-figure {
   aspect-ratio: 4/3;
   transition: border-color .2s, transform .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Formato per screen Verticali / Mockup Smartphone (9:16) */
@@ -170,6 +176,9 @@ h1,h2,h3,p { margin-top: 0; }.hero h1 { font-size: clamp(42px, 5vw, 68px); line-
   max-height: 540px;
   background: var(--surface-2);
   margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .case-thumb.tall .case-figure img,
